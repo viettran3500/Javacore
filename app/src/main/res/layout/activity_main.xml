@@ -86,36 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></Button>
     </LinearLayout>
-    <RadioGroup
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:id="@+id/radioName"
-            android:text="Name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </RadioButton>
-        <RadioButton
-            android:id="@+id/radioYear"
-            android:text="Year of bird"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </RadioButton>
-        <RadioButton
-            android:id="@+id/radioNum"
-            android:text="Phone number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </RadioButton>
-        <RadioButton
-            android:id="@+id/radioSpecialized"
-            android:text="Specialized"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </RadioButton>
-    </RadioGroup>
+
     <LinearLayout
         android:weightSum="10"
         android:orientation="horizontal"
