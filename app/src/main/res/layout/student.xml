@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="#E41212"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tvname"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="Name: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:textColor="#E41212"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvname"
+        android:id="@+id/tetxviewName"
+        android:text="name"
+        android:textSize="15sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:textColor="#E41212"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvname"
+        android:id="@+id/tvyear"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="Year of bird: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:textColor="#E41212"
+        android:layout_below="@+id/tvname"
+        android:layout_toRightOf="@+id/tvyear"
+        android:id="@+id/tetxviewYear"
+        android:text="name"
+        android:textSize="15sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:textColor="#E41212"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvyear"
+        android:id="@+id/tvnum"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="Phone Number: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:textColor="#E41212"
+        android:layout_below="@id/tvyear"
+        android:layout_toRightOf="@+id/tvnum"
+        android:id="@+id/tetxviewNum"
+        android:text="name"
+        android:textSize="15sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:textColor="#E41212"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvnum"
+        android:id="@+id/tve"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="Specialized: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:textColor="#E41212"
+        android:layout_below="@id/tvnum"
+        android:layout_toRightOf="@+id/tve"
+        android:id="@+id/tetxviewSpecialized"
+        android:text="name"
+        android:textSize="15sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+</RelativeLayout>
