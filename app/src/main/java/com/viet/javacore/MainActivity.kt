@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     val PHONE_PATTERN: String = "(0?\\d{9})";
     val YEAR_PATTERN: String = "([1-2]?\\d{3})";
+    lateinit var arrayListStudent1 : MutableList<Student>
     var arrayListStudent: ArrayList<Student> = ArrayList()
     var arrayListStudent2: ArrayList<Student> = ArrayList()
     var arrayListStudent3: ArrayList<Student> = ArrayList()
@@ -103,6 +104,41 @@ class MainActivity : AppCompatActivity() {
                     .show();
             }
         }
+        radioName.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener{
+            override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
+                if(p1 == true){
+                    arrayListStudent1 = arrayListStudent
+                    arrayListStudent1.sortBy { it.name }
+                    arrayListStudent = arrayListStudent1 as ArrayList<Student>
+                    studentAdapter.notifyDataSetChanged()
+                }
+            }
+
+        })
+
+        radioYear.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener{
+            override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
+                if(p1 == true){
+                    arrayListStudent1 = arrayListStudent
+                    arrayListStudent1.sortBy { it.yearOfBird }
+                    arrayListStudent = arrayListStudent1 as ArrayList<Student>
+                    studentAdapter.notifyDataSetChanged()
+                }
+            }
+
+        })
+        radioNum.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener{
+            override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
+                if(p1 == true){
+                    arrayListStudent1 = arrayListStudent
+                    arrayListStudent1.sortBy { it.phoneNumber }
+                    arrayListStudent = arrayListStudent1 as ArrayList<Student>
+                    studentAdapter.notifyDataSetChanged()
+                }
+            }
+
+        })
+
     }
 
     private fun changeCheckbox(b: Boolean, str: String) {
@@ -162,7 +198,8 @@ class MainActivity : AppCompatActivity() {
         for (i in 0 until arrayListStudent.size) {
             if (!(arrayListStudent.get(i).name.toUpperCase().contains(str) ||
                         arrayListStudent.get(i).yearOfBird.toString().contains(str) ||
-                        arrayListStudent.get(i).phoneNumber.toUpperCase().contains(str))
+                        arrayListStudent.get(i).phoneNumber.toUpperCase().contains(str)||
+                        arrayListStudent.get(i).specialized.toUpperCase().contains(str))
             ) {
                 arrayListStudent4.add(arrayListStudent.get(i));
             }
